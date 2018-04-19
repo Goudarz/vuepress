@@ -1,9 +1,9 @@
 <template>
   <div class="dropdown-wrapper" :class="{ open }">
-    <div class="dropdown-title" @click="toggle">
+    <a class="dropdown-title" @click="toggle">
       <span class="title">{{ item.text }}</span>
       <span class="arrow"></span>
-    </div>
+    </a>
     <ul class="nav-dropdown">
       <li
         class="dropdown-item"
@@ -53,11 +53,12 @@ export default {
 
 .dropdown-wrapper
   .dropdown-title
+    display block
     .arrow
       display inline-block
       vertical-align middle
       margin-top -1px
-      margin-left 6px
+      margin-left 0.4rem
       width 0
       height 0
       border-left 4px solid transparent
@@ -94,11 +95,11 @@ export default {
             width 0
             height 0
             border-left 5px solid $accentColor
-            border-top 4px solid transparent
-            border-bottom 4px solid transparent
+            border-top 3px solid transparent
+            border-bottom 3px solid transparent
             position absolute
-            top calc(50% - 3px)
-            left 10px
+            top calc(50% - 2px)
+            left 9px
       &:first-child h4
         margin-top 0
         padding-top 0
